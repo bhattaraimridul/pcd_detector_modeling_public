@@ -1,0 +1,46 @@
+### Don't change the name of directories!!!
+### Geant4 and MATLAB installation required. Read README to install Geant4 using Docker. 
+### Modules 1 and 2 share some parameters.
+
+### Setup for Geant4
+geant4_installation_dir: /absolute/host/path/to/install/geant4		# default = </absolute/path/to/current/directory>/geant4
+
+### Module 1: 
+### Monte Carlo - Geant4
+
+run_module_1: yes		# yes - run module 1, no - skip to module 2 (say, when you already have MC output); default = yes
+num_events: 10		# default = 100000
+energy_max: 120			# in keV; default = 120
+physics_list: livermore		# livermore or penelope; default = livermore
+
+detector_design: face-on 	# options: face-on, edge-on; default = face-on
+detector_material: cdte	 	# options: cdte, czt, gaas, si; default = cdte
+foil_material: W 		# options: W; ignore if detector_design = face-on; default = W 
+
+detector_pixel_size_x: 0.5	# in mm; default = 0.50 mm
+detector_pixel_size_y: 0.6	# in mm; default = 0.60 mm
+detector_thickness_z: 1.6 	# in mm; default = 1.6 mm
+foil_thickness_y: 0.02		# in mm; ignore if detector_design = face-on; default = 0.02 mm
+
+output_dir: ./output/		# default = ./output/
+
+### Module 2:
+### MATLAB
+### Output of Module 2 saved in the directory: {output_dir}/detector_response
+
+run_module_2: no 				# yes = run module-2, no = only do MC simulation and stop code execution here; default = yes
+num_workers_parallel_computing: 32		# integer number that divides energy_max; default = 32
+
+apply_charge_sharing: yes 			# apply charge sharing effect or not; default = yes
+bias_voltage: 1000				# in V, E-field in z-dir for face-on and y-dir for edge-on; default = 1000 V
+
+sigma_electronic_noise: 1.5			# in keV, 0 to not add electronic noise; default = 1.5 keV
+
+detector_response_matrix_size_xy: 3		# odd integer number; detector response matrix size (e.g, 3x3, 5x5, etc.); default = 3
+
+### Note: DukeSim is only compatible with 3x3 detector response
+### set generate_dukesim_detector_response = no if detector_response_matrix_size_xy ~= 3
+
+generate_dukesim_detector_response: yes 	# generate spatio-energetic mean and cov matrices for dukesim?; default = yes
+LT: 20						# in keV, low-threshold for DukeSim; default = 20 keV
+HT: 65						# in keV, high-threshold for DukeSim; default = 65 keV
