@@ -8,8 +8,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy installer script into image
-COPY docker/install_geant4.sh /install_geant4.sh
+COPY ./install_geant4.sh /install_geant4.sh
 RUN chmod +x /install_geant4.sh
 
 ENTRYPOINT ["/bin/bash", "-lc"]
-

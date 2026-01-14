@@ -3,13 +3,13 @@
 ### Modules 1 and 2 share some parameters.
 
 ### Setup for Geant4
-geant4_installation_dir: /absolute/host/path/to/install/geant4		# default = </absolute/path/to/current/directory>/geant4
+geant4_installation_dir: /absolute/host/path/to/install/geant4		# default = </absolute/path/to/current/directory>/install_geant4_docker/geant4
 
 ### Module 1: 
 ### Monte Carlo - Geant4
 
 run_module_1: yes		# yes - run module 1, no - skip to module 2 (say, when you already have MC output); default = yes
-num_events: 10		# default = 100000
+num_events: 10			# default = 100000
 energy_max: 120			# in keV; default = 120
 physics_list: livermore		# livermore or penelope; default = livermore
 
@@ -22,7 +22,7 @@ detector_pixel_size_y: 0.6	# in mm; default = 0.60 mm
 detector_thickness_z: 1.6 	# in mm; default = 1.6 mm
 foil_thickness_y: 0.02		# in mm; ignore if detector_design = face-on; default = 0.02 mm
 
-output_dir: ./output/		# default = ./output/
+output_dir: /absolute/path/to/output/directory	# default = </absolute/path/to/current/directory>/output/
 
 ### Module 2:
 ### MATLAB

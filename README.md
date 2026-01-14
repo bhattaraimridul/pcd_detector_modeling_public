@@ -1,6 +1,3 @@
-## FULL IMPLEMENTATION UPON REQUEST: 
-**bhattaraimridul@gmail.com** OR **mridul.bhattarai@duke.edu** OR **https://mridulbhattarai.com/contact/**. 
-
 ## DukeCounter Detector Response Generator
 
 Author: Mridul Bhattarai, PhD (Center for Virtual Imaging Trials at Duke University)
@@ -11,9 +8,9 @@ It can be used to generate detector responses for any photon-counting detector d
 Detector response refers to the spatio-energetic mean and covariance matrices used to model detector efficiency, crosstalk, and noise characteristics. 
 
 For more information:
-  Paper - https://doi.org/10.1002/mp.70195
-  Author's Website - https://mridulbhattarai.com/research-projects/photon-counting-ct-data-engine/
-  Lab's Website - https://cvit.duke.edu/ 
+	Paper - https://doi.org/10.1002/mp.70195
+	Author's Website - https://mridulbhattarai.com/research-projects/photon-counting-ct-data-engine/
+	Lab's Website - https://cvit.duke.edu/ 
 
 ## How does it work
 
