@@ -1,5 +1,5 @@
 ## FULL IMPLEMENTATION UPON REQUEST: 
-**bhattaraimridul@gmail.com** or **mridul.bhattarai@duke.edu** OR **https://mridulbhattarai.com/contact/**. 
+**bhattaraimridul@gmail.com** OR **mridul.bhattarai@duke.edu** OR **https://mridulbhattarai.com/contact/**. 
 
 ## DukeCounter Detector Response Generator
 
